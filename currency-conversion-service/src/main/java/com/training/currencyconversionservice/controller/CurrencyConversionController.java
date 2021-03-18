@@ -24,7 +24,7 @@ public class CurrencyConversionController {
 		
 		ExchangeValue exchangeValue = restTemplate.getForEntity(url, ExchangeValue.class).getBody();
 		double finalAmount = exchangeValue.getValue() * quantity;
-		CurrencyConversion currencyConversion = new CurrencyConversion(exchangeValue.getId(), from, to, exchangeValue.getValue());
+		CurrencyConversion currencyConversion = new CurrencyConversion(exchangeValue.getId(), from, to, exchangeValue.getValue(), quantity);
 		currencyConversion.setFinalAmount(finalAmount);
 		
 		return new ResponseEntity<CurrencyConversion>(currencyConversion, HttpStatus.OK);

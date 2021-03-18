@@ -6,18 +6,28 @@ public class CurrencyConversion {
 	private String from;
 	private String to;
 	private double conversionRate;
+	private int quantity;
 	private double finalAmount;
 
 	public CurrencyConversion() {
 		super();
 	}
 
-	public CurrencyConversion(int id, String from, String to, double conversionRate) {
+	public CurrencyConversion(int id, String from, String to, double conversionRate, int quantity) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
 		this.conversionRate = conversionRate;
+		this.quantity = quantity;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	public int getId() {

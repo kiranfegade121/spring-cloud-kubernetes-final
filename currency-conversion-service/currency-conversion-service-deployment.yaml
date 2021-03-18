@@ -8,7 +8,7 @@ spec:
       matchLabels: 
           app: currency-conversion-service
    template:
-      matadata:
+      metadata: 
          name: currency-conversion-service
          labels: 
             app: currency-conversion-service

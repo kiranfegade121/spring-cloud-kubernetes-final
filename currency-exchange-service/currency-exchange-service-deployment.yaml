@@ -15,7 +15,7 @@ spec:
       spec: 
           containers: 
              - name: currency-exchange-service
-               image: amitfegade121/currency-exchange-service:latest
+               image: amitfegade121/currency-exchange-service:1.0
                ports:
                   - containerPort: 8082
                env:
